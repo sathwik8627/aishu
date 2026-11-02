@@ -1,1 +1,32 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Aishu AI</title></head><body><h1>Aishu AI</h1></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090914"><meta name="description" content="Aishu — your personal AI voice companion.">
+<title>Aishu AI — Your personal assistant</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<main class="app-shell">
+<aside class="sidebar">
+<div class="brand"><div class="brand-mark">✦</div><div><b>AISHU</b><span>PERSONAL AI</span></div></div>
+<button class="new-chat" id="newChat">＋ <span>New conversation</span></button>
+<div class="side-label">YOUR SPACE</div><div class="side-item active"><span>◈</span> Assistant</div><div class="side-item"><span>⌘</span> Voice studio <small>LIVE</small></div>
+<div class="side-bottom"><div class="status-dot"></div><div><b id="connectionText">Checking connection</b><span>Private local session</span></div></div>
+</aside>
+<section class="main-panel">
+<header class="topbar"><div class="mobile-brand">✦ AISHU</div><div class="top-status"><span class="status-dot"></span> AI SYSTEM <b>READY</b></div><button class="icon-btn" id="clearChat" title="Clear conversation">↺</button></header>
+<div class="workspace">
+<section class="hero" id="hero">
+<div class="eyebrow"><span class="pulse-dot"></span> YOUR PERSONAL AI COMPANION</div>
+<h1>Hi, I'm <span>Aishu.</span></h1><p class="hero-sub">A little intelligence, a lot of heart.<br>What shall we explore today?</p>
+<div class="orb-wrap" id="orbWrap"><div class="orb-halo"></div><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div><button class="orb" id="orbButton" aria-label="Start voice assistant"><span class="orb-core">✦</span></button><div class="orb-caption" id="orbCaption">TAP TO TALK</div></div>
+<div class="wake-hint"><kbd>MIC</kbd> Say <b>“Hey Aishu”</b> after enabling voice mode</div>
+<div class="suggestions"><button class="suggestion" data-prompt="Help me plan a productive day.">✧ <span>Plan my day</span></button><button class="suggestion" data-prompt="Explain a difficult topic in simple words.">⌁ <span>Learn something</span></button><button class="suggestion" data-prompt="Give me ideas for a creative project.">✳ <span>Get inspired</span></button></div>
+</section><section class="chat-area" id="chatArea" aria-live="polite"></section>
+</div>
+<footer class="composer-wrap"><div class="composer"><textarea id="messageInput" rows="1" placeholder="Message Aishu…" aria-label="Message Aishu"></textarea><button class="send-btn" id="sendButton" aria-label="Send message">↑</button></div><div class="composer-note">Aishu can make mistakes. Verify important information.</div></footer>
+</section></main><div class="toast" id="toast" role="status"></div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
